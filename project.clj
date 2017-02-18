@@ -1,4 +1,4 @@
-(defproject jp.nijohando.deferable "0.1.0"
+(defproject jp.nijohando/deferable "0.1.0"
   :description "Finally block free deferred function utilities"
   :url "https://github.com/nijohando/deferable"
   :license {:name "Eclipse Public License"
