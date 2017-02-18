@@ -1,0 +1,8 @@
+machine:
+  timezone:
+    Asia/Tokyo
+test:
+  override:
+    - lein clj-test
+    - lein cljs-test
+
