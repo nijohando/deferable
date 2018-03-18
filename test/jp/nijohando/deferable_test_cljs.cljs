@@ -1,6 +1,6 @@
 (ns jp.nijohando.deferable-test-cljs
   (:require [cljs.test :as t :refer-macros [run-tests is are deftest testing async]]
-            [jp.nijohando.deferable :as d]
+            [jp.nijohando.deferable :as d :include-macros true]
             [cljs.core.async :as as])
   (:require-macros [cljs.core.async.macros :refer [go]]))
 
