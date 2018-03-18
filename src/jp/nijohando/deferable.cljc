@@ -2,14 +2,6 @@
 
 (def ^:dynamic *context* nil)
 
-(defn done*
-  [ctx]
-  (when ctx
-    (doseq [x (reverse @ctx)]
-      @x)))
-
-#? (:clj [
-
 (defmacro defer
   [& forms]
   `(do
@@ -19,15 +11,15 @@
 (defmacro do**
   [done-sym & forms]
   `(let [ctx# (atom [])
-         ~done-sym (fn [] (done* ctx#))]
+         ~done-sym (fn []
+                     (doseq [x# (reverse @ctx#)]
+                       @x#))]
      (binding [*context* ctx#]
-     ~@forms)))
+       ~@forms)))
 
 (defmacro do*
   [& forms]
-  `(binding [*context* (atom [])]
-     (try ~@forms
-       (finally (done* *context*)))))
-
-])
-
+  `(do** done#
+     (try
+       ~@forms
+       (finally (done#)))))

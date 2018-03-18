@@ -1,9 +1,7 @@
 (ns jp.nijohando.deferable-test
   (:require #?(:clj  [clojure.test :as t :refer [run-tests is are deftest testing]]
                :cljs [cljs.test :as t :refer-macros [run-tests is are deftest testing async]])
-            [jp.nijohando.deferable :as d :include-macros true]
-            #?(:clj [clojure.core.async :as as] :cljs [cljs.core.async :as as]))
-  #?(:cljs (:require-macros [cljs.core.async.macros :refer [go]])))
+            [jp.nijohando.deferable :as d :include-macros true]))
 
 (deftest do*-tests
   (testing "Evaluated value is returned"
