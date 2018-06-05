@@ -4,6 +4,7 @@
 ### Project specific
 
 package.json
+package-lock.json
 .cpcache
 .envrc
 README.html
