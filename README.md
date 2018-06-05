@@ -17,13 +17,13 @@ Main motivations for writing this library are:
 #### Ligningen / Boot
 
 ```clojure
-[jp.nijohando/deferable "0.2.0"]
+[jp.nijohando/deferable "0.2.1"]
 ```
 
 #### Clojure CLI / deps.edn
 
 ```clojure
-jp.nijohando/deferable {:mvn/version "0.2.0"}
+jp.nijohando/deferable {:mvn/version "0.2.1"}
 ```
 
 ## Usage
